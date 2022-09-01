@@ -4,7 +4,7 @@ public class Class1
 {
 	public Class1()
 	{
-        static void MenuDoUsuario()
+        public void MenuDoUsuario()
         {
             MostrarIntroducao("MENU DO USUÁRIO");
             string resposta;

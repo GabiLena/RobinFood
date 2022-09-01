@@ -7,7 +7,6 @@ namespace RobinFood.CLI
     {
         static List<string> lojasCadastradas = new List<string>();
 
-        string MenuDoUsuario = new MenuDoUsuario();
         static void Main(string[] args)
         {
             bool pediuPraSair = false;
@@ -36,7 +35,7 @@ namespace RobinFood.CLI
                         pediuPraSair = true;
                         break;
                 }
-            } while (!pediuPraSair);       
+            } while (!pediuPraSair);
         }
 
         static void MostrarIntroducao(string mensagem)
@@ -54,7 +53,7 @@ namespace RobinFood.CLI
         static void MenuDaLoja()
         {
             MostrarIntroducao("BEM VINDO A VISUALIZAÇÃO DE LOJA");
-            
+
             string resposta;
             bool pediuPraVoltarOMenu = false;
             do
@@ -63,6 +62,7 @@ namespace RobinFood.CLI
 
                 Console.WriteLine("A - Cadastrar minha loja");
                 Console.WriteLine("B - Visualizar lojas");
+                Console.WriteLine("C - Adicionar Produto");
                 Console.WriteLine("X - Para voltar ao menu anterior");
 
                 resposta = Console.ReadLine();
@@ -77,38 +77,44 @@ namespace RobinFood.CLI
                     case "b":
                         VisualizarLojas();
                         break;
+                    case "C":
+                    case "c":
+                        string nomeproduto = Console.ReadLine();
+                        Produto produto = new Produto(nomeproduto, valor);
+                        //decimal valor = Console.ReadLine();
+                        
+                            break;
                     default:
                         pediuPraVoltarOMenu = true;
                         break;
                 }
             } while (!pediuPraVoltarOMenu);
         }
-      // static void MenuDoUsuario()
-        //{
-          //  MostrarIntroducao("MENU DO USUÁRIO");
-            //string resposta;
-            //Console.WriteLine("Olá usuário, tudo bem? O que você quer?");
+        static void MenuDoUsuario()
+        {
+            MostrarIntroducao("MENU DO USUÁRIO");
+            string resposta;
+            Console.WriteLine("Olá usuário, tudo bem? O que você quer?");
 
-            //Console.WriteLine("1 - Visualizar os restaurantes cadastrados");
-            //Console.WriteLine("2 - Buscar um item específico");
-            //Console.WriteLine("3 - Me cadastrar no sistema");
+            Console.WriteLine("1 - Visualizar os restaurantes cadastrados");
+            Console.WriteLine("2 - Buscar um item específico");
+            Console.WriteLine("3 - Me cadastrar no sistema");
 
-            //resposta = Console.ReadLine();
+            resposta = Console.ReadLine();
 
-            //switch (resposta)
-               // {
-              //  case "1":
-                //    VisualizarLojas();
-                  //  break;
-                //*case "2":
-                    //BuscarItem();
-                  //  break;
-                //case "3":
-                    //CadastroDeUsuario();
-                    //default;
-
-          //  }
-        //}
+            switch (resposta)
+            {
+                case "1":
+                    VisualizarLojas();
+                    break;
+               // case "2":
+                 //   BuscarItem();
+                   // break;
+                case "3":
+                    CadastroDeUsuario cadastro = new CadastroDeUsuario();
+                    break;
+            }
+        }
         static void CadastrarLoja()
         {
             Console.WriteLine("Digite o nome da loja:");
