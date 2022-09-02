@@ -8,7 +8,7 @@ namespace RobinFood.CLI
 
     {
         public string NomeCompleto { get; set; }
-        public string email { get; set; }
+        public string Email { get; set; }
         public int Telefone { get; set; }
     }
 }
