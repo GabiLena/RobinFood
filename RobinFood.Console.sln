@@ -5,7 +5,10 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobinFood.CLI", "RobinFood.Console\RobinFood.CLI.csproj", "{39E58E91-E9B3-4D3D-985C-B6F8D2D20673}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{537511FE-9733-4E44-937D-7E9903836B72}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C4D0DFF-8F9E-47B1-92BE-C40100719779}"
+	ProjectSection(SolutionItems) = preProject
+		MenuDoUsuario.cs = MenuDoUsuario.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
