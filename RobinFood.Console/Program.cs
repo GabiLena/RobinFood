@@ -5,9 +5,9 @@ namespace RobinFood.CLI
 {
     internal class Program
     {
-        static List<string> lojasCadastradas = new List<string>();
         static List<Produto> produtosCadastradas = new List<Produto>();
-
+        static MenuDeLojas menu = new MenuDeLojas();
+        
         static void Main(string[] args)
         {
             bool pediuPraSair = false;
@@ -54,11 +54,11 @@ namespace RobinFood.CLI
 
         static void MenuDaLoja()
         {
+            Console.Clear();
             string resposta;
             bool pediuPraVoltarOMenu = false;
 
             MostrarIntroducao("BEM VINDO A VISUALIZAÇÃO DE LOJA");
-
             do
             {
                 Console.WriteLine("Olá loja, tudo bem? O que você quer?");
@@ -75,18 +75,18 @@ namespace RobinFood.CLI
                 {
                     case "A":
                     case "a":
-                        CadastrarLoja();
+                        CadastrarLoja(menu);
                         break;
                     case "B":
                     case "b":
-                        VisualizarLojas();
+                        VisualizarLojas(menu);
                         break;
                     case "C":
                     case "c":
-                        AdicionarProduto();
+                        AdicionarProdutoSelecionandoLoja(menu);
                         break;
                     case "D":
-                        case "d":
+                    case "d":
                         VisualizarProdutos();
                         break;
                     default:
@@ -98,69 +98,78 @@ namespace RobinFood.CLI
 
         static void MenuDoUsuario()
         {
-            MostrarIntroducao("MENU DO USUÁRIO");
+            //Console.Clear();
+            //MostrarIntroducao("MENU DO USUÁRIO");
 
-            Console.WriteLine("Olá usuário, tudo bem? O que você quer?");
+            //Console.WriteLine("Olá usuário, tudo bem? O que você quer?");
 
-            Console.WriteLine("1 - Visualizar os restaurantes cadastrados");
-            Console.WriteLine("2 - Buscar um item específico");
-            Console.WriteLine("3 - Me cadastrar no sistema");
+            //Console.WriteLine("1 - Visualizar os restaurantes cadastrados");
+            //Console.WriteLine("2 - Buscar um item específico");
+            //Console.WriteLine("3 - Me cadastrar no sistema");
 
-            string resposta = Console.ReadLine();
+            //string resposta = Console.ReadLine();
 
-            switch (resposta)
-            {
-                case "1":
-                    VisualizarLojas();
-                    break;
-                // case "2":
-                //   BuscarItem();
-                // break;
-                case "3":
-                    CadastroDeUsuario cadastro = new CadastroDeUsuario();
-                    break;
-            }
+            //switch (resposta)
+            //{
+            //    case "1":
+            //        VisualizarLojas();
+            //        break;
+            //    // case "2":
+            //    //   BuscarItem();
+            //    // break;
+            //    case "3":
+            //        CadastroDeUsuario cadastro = new CadastroDeUsuario();
+            //        Console.WriteLine("Escreva seu nome: ");
+            //        break;
+            //}
         }
 
-        static void AdicionarProduto()
+        static void AdicionarProdutoSelecionandoLoja(MenuDeLojas menu)
         {
+            var listaDeLojas = menu.ListaDeLojas;
+
+            Console.WriteLine("Nome da loja: ");
+            var nomedaloja = Console.ReadLine();
+
             Console.WriteLine("adicione o valor:");
             var valor = Console.ReadLine();
             var valordecimal = decimal.Parse(valor);
+            
             Console.WriteLine("adicione o produto:");
             string nomeproduto = Console.ReadLine();
-            Produto produto = new Produto(nomeproduto, valordecimal);
+            
+            Produto produto = new Produto(nomeproduto, valordecimal, nomedaloja);
             produtosCadastradas.Add(produto);
         }
 
-        static void AdicionarProdutoFeitoPeloNorton()
-        {
-            Console.WriteLine("adicione o valor:");
-            decimal valor = decimal.Parse(Console.ReadLine());
+        //static void AdicionarProdutoFeitoPeloNorton()
+        //{
+        //  Console.WriteLine("adicione o valor:");
+        //decimal valor = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine("adicione o produto:");
-            string nome = Console.ReadLine();
+        //Console.WriteLine("adicione o produto:");
+        //string nome = Console.ReadLine();
 
-            produtosCadastradas.Add(new Produto(nome, valordecimal));
-        }
+        //  produtosCadastradas.Add(new Produto(nome,valor));
+        //}
 
-        static void CadastrarLoja()
+        static void CadastrarLoja(MenuDeLojas menu)
         {
             Console.WriteLine("Digite o nome da loja:");
             string nomeDaLoja = Console.ReadLine();
-
-            lojasCadastradas.Add(nomeDaLoja);
+            
+            var loja = new Loja(nomeDaLoja);
+            menu.ListaDeLojas.Add(loja);
         }
 
-        static void VisualizarLojas()
+        static void VisualizarLojas(MenuDeLojas menu)
         {
-            foreach (var item in lojasCadastradas)
+            foreach (var loja in menu.ListaDeLojas)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(loja.Nome);
             }
 
-            Console.WriteLine("Número total de lojas: " + lojasCadastradas.Count);
-            //testando git
+            Console.WriteLine("Número total de lojas: " + menu.ListaDeLojas.Count);
         }
 
         static void VisualizarProdutos()
@@ -171,10 +180,11 @@ namespace RobinFood.CLI
 
             foreach (var produto in produtosCadastradas)
             {
+                Console.WriteLine("Nome da loja: " + produto.NomeLoja);
                 Console.WriteLine("Nome do produto: " + produto.Nome);
                 Console.WriteLine("Valor do produto: R$" + produto.Valor);
             }
-            
+
             Console.WriteLine("Produtos Cadastrados: " + produtosCadastradas.Count);
         }
     }

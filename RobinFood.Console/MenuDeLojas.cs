@@ -15,9 +15,5 @@ namespace RobinFood.CLI
 
             Console.WriteLine("Número total de lojas: " + ListaDeLojas.Count);
         }
-
-
     }
-
-
 }
