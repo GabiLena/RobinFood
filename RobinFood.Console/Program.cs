@@ -7,7 +7,7 @@ namespace RobinFood.CLI
     {
         static List<Produto> produtosCadastradas = new List<Produto>();
         static MenuDeLojas menu = new MenuDeLojas();
-        
+
         static void Main(string[] args)
         {
             bool pediuPraSair = false;
@@ -126,18 +126,26 @@ namespace RobinFood.CLI
 
         static void AdicionarProdutoSelecionandoLoja(MenuDeLojas menu)
         {
+            Console.Clear();
+
+            Console.WriteLine("Qual é a sua loja?: ");
+
+            foreach (var loja in menu.ListaDeLojas)
+            {
+                Console.WriteLine(loja.Nome);
+            }
+
             var listaDeLojas = menu.ListaDeLojas;
 
-            Console.WriteLine("Nome da loja: ");
             var nomedaloja = Console.ReadLine();
 
             Console.WriteLine("adicione o valor:");
             var valor = Console.ReadLine();
             var valordecimal = decimal.Parse(valor);
-            
+
             Console.WriteLine("adicione o produto:");
             string nomeproduto = Console.ReadLine();
-            
+
             Produto produto = new Produto(nomeproduto, valordecimal, nomedaloja);
             produtosCadastradas.Add(produto);
         }
@@ -155,15 +163,17 @@ namespace RobinFood.CLI
 
         static void CadastrarLoja(MenuDeLojas menu)
         {
+            Console.Clear();
             Console.WriteLine("Digite o nome da loja:");
             string nomeDaLoja = Console.ReadLine();
-            
+
             var loja = new Loja(nomeDaLoja);
             menu.ListaDeLojas.Add(loja);
         }
 
         static void VisualizarLojas(MenuDeLojas menu)
         {
+            Console.Clear();
             foreach (var loja in menu.ListaDeLojas)
             {
                 Console.WriteLine(loja.Nome);
@@ -174,9 +184,16 @@ namespace RobinFood.CLI
 
         static void VisualizarProdutos()
         {
-            // Expressão Lambda
-            // produtosCadastradas.Where(item => item.Nome == "hambuguer");
+            Console.Clear();
 
+            Console.WriteLine("De qual loja deseja ver os produtos?");
+
+            foreach (var loja in menu.ListaDeLojas)
+            {
+                Console.WriteLine(loja.Nome);
+            }
+
+            Console.WriteLine (menu.ListaDeLojas.Count);
 
             foreach (var produto in produtosCadastradas)
             {
