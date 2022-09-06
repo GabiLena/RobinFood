@@ -193,7 +193,9 @@ namespace RobinFood.CLI
                 Console.WriteLine(loja.Nome);
             }
 
-            Console.WriteLine (menu.ListaDeLojas.Count);
+            Console.WriteLine(menu.ListaDeLojas.Count);
+
+            Console.ReadLine();
 
             foreach (var produto in produtosCadastradas)
             {
