@@ -40,3 +40,17 @@ C:\Users\vinic\source\p\RobinFood\RobinFood.Console\bin\Debug\netcoreapp3.1\Robi
 C:\Users\vinic\source\p\RobinFood\RobinFood.Console\bin\Debug\netcoreapp3.1\RobinFood.CLI.dll
 C:\Users\vinic\source\p\RobinFood\RobinFood.Console\bin\Debug\netcoreapp3.1\RobinFood.CLI.pdb
 C:\Users\vinic\source\p\RobinFood\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.genruntimeconfig.cache
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\bin\Debug\netcoreapp3.1\RobinFood.CLI.exe
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\bin\Debug\netcoreapp3.1\RobinFood.CLI.deps.json
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\bin\Debug\netcoreapp3.1\RobinFood.CLI.runtimeconfig.json
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\bin\Debug\netcoreapp3.1\RobinFood.CLI.runtimeconfig.dev.json
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\bin\Debug\netcoreapp3.1\RobinFood.CLI.dll
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\bin\Debug\netcoreapp3.1\RobinFood.CLI.pdb
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.csproj.AssemblyReference.cache
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.AssemblyInfoInputs.cache
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.AssemblyInfo.cs
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.csproj.CoreCompileInputs.cache
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.dll
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.pdb
+C:\Users\vinic\source\p\RobinFood-old\RobinFood.Console\obj\Debug\netcoreapp3.1\RobinFood.CLI.genruntimeconfig.cache

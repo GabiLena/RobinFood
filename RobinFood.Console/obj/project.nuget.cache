@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vygOU/j4HboLYsM4Ese2I1wIIGhqUKq6hEsqbns7VprwEfZe83ulANwT3SFwybrsWxbbLF7YkV4QLLdFltilsg==",
+  "dgSpecHash": "OEJeUVH5/WSnJz/rlV0EjaxLxJU9jy7ny5j7gNAvUrURKL4FhAXcqBlVZ9DiVKL3yU3dAAUbDkk0aT2tF6p/nQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vinic\\source\\p\\RobinFood\\RobinFood.Console\\RobinFood.CLI.csproj",
+  "projectFilePath": "C:\\Users\\vinic\\source\\p\\RobinFood-old\\RobinFood.Console\\RobinFood.CLI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

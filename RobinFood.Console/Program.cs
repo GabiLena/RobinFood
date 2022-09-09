@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RobinFood.CLI
 {
@@ -193,18 +194,20 @@ namespace RobinFood.CLI
                 Console.WriteLine(loja.Nome);
             }
 
-            Console.WriteLine(menu.ListaDeLojas.Count);
+            string nomeDaLojaEscolhida = Console.ReadLine();
+            Console.Clear();
+            var lojaEscolhida = menu.ListaDeLojas.FirstOrDefault(l => l.Nome == nomeDaLojaEscolhida);
 
-            Console.ReadLine();
-
-            foreach (var produto in produtosCadastradas)
+            foreach (var produto in lojaEscolhida.Produtos)
             {
                 Console.WriteLine("Nome da loja: " + produto.NomeLoja);
                 Console.WriteLine("Nome do produto: " + produto.Nome);
                 Console.WriteLine("Valor do produto: R$" + produto.Valor);
+
             }
 
-            Console.WriteLine("Produtos Cadastrados: " + produtosCadastradas.Count);
+            Console.WriteLine("Total de produtos cadastrados nessa loja: " + lojaEscolhida.Produtos.Count);
+
         }
     }
 }

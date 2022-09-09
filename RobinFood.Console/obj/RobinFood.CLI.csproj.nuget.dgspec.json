@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinic\\source\\p\\RobinFood\\RobinFood.Console\\RobinFood.CLI.csproj": {}
+    "C:\\Users\\vinic\\source\\p\\RobinFood-old\\RobinFood.Console\\RobinFood.CLI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinic\\source\\p\\RobinFood\\RobinFood.Console\\RobinFood.CLI.csproj": {
+    "C:\\Users\\vinic\\source\\p\\RobinFood-old\\RobinFood.Console\\RobinFood.CLI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinic\\source\\p\\RobinFood\\RobinFood.Console\\RobinFood.CLI.csproj",
+        "projectUniqueName": "C:\\Users\\vinic\\source\\p\\RobinFood-old\\RobinFood.Console\\RobinFood.CLI.csproj",
         "projectName": "RobinFood.CLI",
-        "projectPath": "C:\\Users\\vinic\\source\\p\\RobinFood\\RobinFood.Console\\RobinFood.CLI.csproj",
+        "projectPath": "C:\\Users\\vinic\\source\\p\\RobinFood-old\\RobinFood.Console\\RobinFood.CLI.csproj",
         "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinic\\source\\p\\RobinFood\\RobinFood.Console\\obj\\",
+        "outputPath": "C:\\Users\\vinic\\source\\p\\RobinFood-old\\RobinFood.Console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config",
